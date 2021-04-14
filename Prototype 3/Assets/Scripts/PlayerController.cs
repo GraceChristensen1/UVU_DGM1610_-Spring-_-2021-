@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     public float jumpforce;
     public float gravityModifier;
     public bool isOnGround = true;
-    public bool gameOver;
+    public bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +35,8 @@ public class PlayerControl : MonoBehaviour
             isOnGround = true;
         } else if(Collision.gameObject.CompareTag("Obstacle"))
         {   
-             Debug.Log("Game Over");
              gameOver = true;
+             Debug.Log("Game Over");
         }
     }
 }
