@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
           isOnGround = false;
       }  
     }
+        private void CollisionEnter(Collision Collision)
+        {
+            isOnGround = true;
+        }
 }
-     private void OnCollisionEnter(Collision collision)
-     {
-         isOnGround = true;
-     }
